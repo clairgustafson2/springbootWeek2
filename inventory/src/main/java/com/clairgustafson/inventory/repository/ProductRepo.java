@@ -1,5 +1,9 @@
 package com.clairgustafson.inventory.repository;
 
-public interface ProductRepo {
+import org.springframework.data.repository.CrudRepository;
+
+import com.clairgustafson.inventory.entity.Product;
+
+public interface ProductRepo extends CrudRepository<Product, Long> {
 
 }

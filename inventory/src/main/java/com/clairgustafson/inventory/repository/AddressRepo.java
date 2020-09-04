@@ -1,5 +1,9 @@
 package com.clairgustafson.inventory.repository;
 
-public interface AddressRepo {
+import org.springframework.data.repository.CrudRepository;
+
+import com.clairgustafson.inventory.entity.Address;
+
+public interface AddressRepo extends CrudRepository<Address, Long> {
 
 }
