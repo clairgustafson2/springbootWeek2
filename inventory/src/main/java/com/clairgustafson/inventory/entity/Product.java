@@ -22,7 +22,7 @@ public class Product {
 	private double price;
 	
 	@JsonIgnore
-	private Set<Order> orders;
+	private Set<Orders> orders;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -62,11 +62,11 @@ public class Product {
 	@JoinTable(name = "product_order",
 			joinColumns = @JoinColumn(name = "OrderId", referencedColumnName = "id"),
 			inverseJoinColumns = @JoinColumn(name = "productId", referencedColumnName = "id"))
-	public Set<Order> getOrders() {
+	public Set<Orders> getOrders() {
 		return orders;
 	}
 
-	public void setOrders(Set<Order> orders) {
+	public void setOrders(Set<Orders> orders) {
 		this.orders = orders;
 	}
 	

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.clairgustafson.inventory.entity.Order;
+import com.clairgustafson.inventory.entity.Orders;
 import com.clairgustafson.inventory.service.OrderService;
 import com.clairgustafson.inventory.util.OrderStatus;
 
@@ -32,7 +32,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value="/{orderId}", method=RequestMethod.PUT)
-	public ResponseEntity<Object> updateOrder(@RequestBody Order order, @PathVariable Long orderId){
+	public ResponseEntity<Object> updateOrder(@RequestBody Orders order, @PathVariable Long orderId){
 		try {
 			if (order.getStatus().equals(OrderStatus.CANCELED)) {
 				return new ResponseEntity<Object>(service.cancelOrder(orderId), HttpStatus.OK);

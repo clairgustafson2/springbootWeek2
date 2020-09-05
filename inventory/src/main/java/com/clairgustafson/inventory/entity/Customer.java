@@ -21,7 +21,7 @@ public class Customer {
 	private String lastName;
 	private Address address;
 	private MembershipLevel level;
-	private Set<Order> orders;
+	private Set<Orders> orders;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -67,11 +67,11 @@ public class Customer {
 	}
 	
 	@OneToMany(mappedBy = "customer")
-	public Set<Order> getOrders() {
+	public Set<Orders> getOrders() {
 		return orders;
 	}
 	
-	public void setOrders(Set<Order> orders) {
+	public void setOrders(Set<Orders> orders) {
 		this.orders = orders;
 	}
 	

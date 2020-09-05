@@ -15,7 +15,7 @@ import com.clairgustafson.inventory.util.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class Order {
+public class Orders {
 	
 	private Long id;
 	private LocalDate ordered;
